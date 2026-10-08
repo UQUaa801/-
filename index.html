@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استبيان الحرم الجامعي</title>
+    <style>
+        body { font-family: Tahoma, sans-serif; background: #f4f6f9; padding: 20px; direction: rtl; text-align: right; }
+        .box { max-width: 650px; background: #fff; margin: auto; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { color: #004d40; text-align: center; }
+        .q { margin-bottom: 20px; background: #fafafa; padding: 12px; border-radius: 6px; border: 1px solid #ddd; }
+        label { display: block; margin-bottom: 6px; font-weight: bold; }
+        input[type="text"], textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        textarea { height: 70px; }
+        button { background: #00796b; color: #fff; border: none; padding: 10px; width: 100%; font-size: 16px; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #004d40; }
+        #msg { display: none; background: #d4edda; color: #155724; padding: 15px; text-align: center; font-weight: bold; border-radius: 6px; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>استبيان تقييم أماكن الراحة والجلوس في الحرم الجامعي</h2>
+    <form id="f" onsubmit="event.preventDefault(); document.getElementById('f').style.display='none'; document.getElementById('msg').style.display='block';">
+        
+        <div class="q">
+            <label>الاسم (اختياري):</label>
+            <input type="text" placeholder="اكتب اسمك...">
+        </div>
+
+        <div class="q">
+            <label>1. هل تجد عددًا كافياً من المقاعد وأماكن الجلوس في الحرم الجامعي؟</label>
+            
+            <label><input type="radio" name="q1" value="2"> موافق</label>
+            <label><input type="radio" name="q1" value="3"> محايد</label>
+            <label><input type="radio" name="q1" value="4"> غير موافق</label>
+           
+        </div>
+
+        <div class="q">
+            <label>2. هل تتوزع المقاعد بشكل يغطي أرجاء الجامعة المختلفة دون تركيزها في مناطق معينة؟</label>
+           
+            <label><input type="radio" name="q2" value="2"> موافق</label>
+            <label><input type="radio" name="q2" value="3"> محايد</label>
+            <label><input type="radio" name="q2" value="4"> غير موافق</label>
+           
+        </div>
+
+        <div class="q">
+            <label>3. هل تعتبر مقاعد الجلوس مريحة للجلوس لفترات انتظار طويلة؟</label>
+            
+            <label><input type="radio" name="q3" value="2"> موافق</label>
+            <label><input type="radio" name="q3" value="3"> محايد</label>
+            <label><input type="radio" name="q3" value="4"> غير موافق</label>
+          
+        </div>
+
+        <div class="q">
+            <label>4. هل تتوفر مقابس كهربائية بالقرب من مقاعد الجلوس لشحن الأجهزة الإلكترونية؟</label>
+           
+            <label><input type="radio" name="q4" value="2"> موافق</label>
+            <label><input type="radio" name="q4" value="3"> محايد</label>
+            <label><input type="radio" name="q4" value="4"> غير موافق</label>
+          
+        </div>
+
+        <div class="q">
+            <label>5. هل تبدو أماكن الجلوس نظيفة وبحالة سليمة؟</label>
+           
+            <label><input type="radio" name="q5" value="2"> موافق</label>
+            <label><input type="radio" name="q5" value="3"> محايد</label>
+            <label><input type="radio" name="q5" value="4"> غير موافق</label>
+           
+        </div>
+
+        <div class="q">
+            <label>6. برأيك ما هي أبرز الأماكن التي تعاني من نقص في المقاعد؟ (اختياري)</label>
+            <textarea placeholder="اكتب إجابتك هنا..."></textarea>
+        </div>
+
+        <div class="q">
+            <label>7. ما هي مقترحاتك لتحسين تجربة الجلوس والراحة؟ (اختياري)</label>
+            <textarea placeholder="اكتب اقتراحاتك هنا..."></textarea>
+        </div>
+
+        <button type="submit">إرسال الاستبيان</button>
+    </form>
+
+    <div id="msg">شكراً لك! تم إرسال ردك بنجاح.</div>
+</div>
+
+ <form action="https://formspree.io/f/xbgleywb" method="POST"></form>
+
+</body>
+</html>
